@@ -1,24 +1,17 @@
 import type { RemovableRef } from '@vueuse/core'
-import type { Player, Positions, PresetPosition } from '~/types'
+import type { Player, PlayerPosition, PresetPosition } from '~/types'
 import presetPositions from './positions.json'
+import type { InputMenuItem } from '@nuxt/ui'
 
 
-export function positionShortcuts(position: Positions) {
+export function positionShortcuts(position: PlayerPosition) {
   switch (position) {
     case 'Attaquant':
       return 'ATT'
-    case 'Avant-Centre Gauche':
-      return 'AVG'
-    case 'Avant-Centre Droit':
-      return 'AVD'
     case 'Ailier Droit':
       return 'AD'
     case 'Ailier Gauche':
       return 'AG'
-    case 'Milieu Droit':
-      return 'MD'
-    case 'Milieu Gauche':
-      return 'MG'
     case 'Milieu Central Droit':
       return 'MCD'
     case 'Milieu Central Gauche':
@@ -35,18 +28,14 @@ export function positionShortcuts(position: Positions) {
       return 'DCD'
     case 'Défenseur Central Gauche':
       return 'DCG'
-    case 'Défenseur Central':
-      return 'DC'
     case 'Latéral Droit':
       return 'LD'
     case 'Latéral Gauche':
       return 'LG'
-    case 'Arrière Droit':
-      return 'AD'
-    case 'Arrière Gauche':
-      return 'AG'
     case 'Gardien':
       return 'G'
+    default:
+      return ''
   }
 }
 
@@ -54,7 +43,7 @@ export function positionShortcuts(position: Positions) {
  * Returns the typical number associated with a given football position.
  * @param position - The football position for which to retrieve the number.
  */
-export function positionNumbers(position: Positions) {
+export function positionNumbers(position: PlayerPosition) {
   switch (position) {
     case 'Attaquant':
       return 9
@@ -215,7 +204,8 @@ export function getBasePositions(): RemovableRef<Player[]> {
 
 export function usePresetPositions() {
   const items = computed(() => presetPositions as PresetPosition[])
-  const names = computed(() => presetPositions.map((position) => position.name))
+  const names = computed(() => presetPositions.map((position) => position.strategy))
+
   return {
     items,
     names
