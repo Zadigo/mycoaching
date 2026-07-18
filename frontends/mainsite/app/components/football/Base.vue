@@ -17,11 +17,12 @@
         </u-button>
 
         <div>
-          <u-button>
+          <u-button @click="() => { toggleGrid() }">
             <icon name="i-lucide-grid" />
             Montrer les espaces
           </u-button>
-          <u-button>
+          
+          <u-button :disabled="!showGrid" @click="() => { toggleHalfSpaces() }">
             <icon name="i-lucide-grid" />
             Montrer les demi-espaces
           </u-button>
@@ -36,9 +37,11 @@
           <football-player v-for="player in players" :key="player.id" :player="player" :parent="footballPitchEl" />
 
           <!-- Divisions -->
-          <football-space-divisions>
+          <football-space-divisions v-if="showGrid">
             <football-space-division id="couloir-droit" name="Couloir droit" />
+            <football-space-division v-show="showHalfSpaces" id="half-space-1" name="Demi-espace droit" />
             <football-space-division id="couloir-central" name="Couloir central" />
+            <football-space-division v-show="showHalfSpaces" id="half-space-2" name="Demi-espace gauche" />
             <football-space-division id="couloir-gauche" name="Couloir gauche" />
           </football-space-divisions>
         </div>
@@ -71,15 +74,17 @@
     <template #body>
       <div v-if="editablePlayer">
         <u-input v-model="editablePlayer.name" placeholder="Nom" />
-        <u-select v-model="editablePlayer.globalPosition" :items="globalPositionsConstant" placeholder="Position globale" />
-        <u-input-menu v-model="editablePlayer.position" :items="positionConstant" placeholder="Position spécifique" />
-        <u-input-menu v-model="editablePlayer.roles" :items="rolesConstant" placeholder="Rôle" multiple />
+        <u-select v-model="editablePlayer.globalPosition" :items="Array.from(globalPositions)" placeholder="Position globale" />
+        <u-input-menu v-model="editablePlayer.position" :items="Array.from(playerPositions)" placeholder="Position spécifique" />
+        <u-input-menu v-model="editablePlayer.roles" :items="Array.from(playerRoles)" placeholder="Rôle" multiple />
       </div>
     </template>
   </u-modal>
 </template>
 
 <script setup lang="ts">
+import { globalPositions, playerPositions, playerRoles } from '~/types'
+
 const footballPitchEl = useTemplateRef('footballPitchEl')
 
 const players = getBasePositions()
@@ -92,6 +97,17 @@ const { showModal, editablePlayer } = usePlayerComposable()
 const { names, items } = usePresetPositions()
 const { selectedName, selectedSubName, subNames, selectedPreset, selectedSubPreset, loadPreset } = usePresetPositionSelection(items, players)
 
+/**
+ * Clipboard
+ */
+
 const strPlayers = computed(() => JSON.stringify(players.value))
 const { copy } = useClipboard({ source: strPlayers })
+
+/**
+ * Grids
+ */
+
+const [showGrid, toggleGrid] = useToggle()
+const [showHalfSpaces, toggleHalfSpaces] = useToggle()
 </script>
