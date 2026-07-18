@@ -1,5 +1,5 @@
 <template>
-  <section id="football" class="w-full h-full relative transition-all ease-in-out duration-300">
+  <section id="football" class="w-full h-full p-5 max-w-7xl mx-auto space-y-5 relative transition-all ease-in-out duration-300">
     <!-- Header -->
     <header>
       <u-card>
@@ -8,23 +8,55 @@
         <u-select v-if="selectedSubPreset && selectedSubPreset.onPossession && selectedSubPreset.onPossession.length > 0" :items="selectedSubPreset.onPossession" class="w-55" placeholder="On possession" />
         <u-select v-if="selectedSubPreset && selectedSubPreset.onDefense && selectedSubPreset.onDefense.length > 0" :items="selectedSubPreset.onDefense" class="w-55" placeholder="On defense" />
         <u-button @click="() => { loadPreset() }">
-          <icon name="i-cloud" />
+          <icon name="i-lucide-cloud-upload" />
           Load preset
         </u-button>
         <u-button @click="async () => void copy(strPlayers)">
           <icon name="i-lucide-copy" />
           Copy positions
         </u-button>
+
+        <div>
+          <u-button>
+            <icon name="i-lucide-grid" />
+            Montrer les espaces
+          </u-button>
+          <u-button>
+            <icon name="i-lucide-grid" />
+            Montrer les demi-espaces
+          </u-button>
+        </div>
       </u-card>
     </header>
     
     <!-- Pitch -->
-    <div class="p-20 relative">
+    <div class="relative grid grid-cols-2 gap-10 rounded-lg">
       <client-only>
-        <div ref="footballPitchEl" class="bg-blue-50 dark:bg-blue-800 h-200 w-150 p-10 mx-auto relative">
+        <div ref="footballPitchEl" class="bg-blue-50 dark:bg-blue-800 h-200 w-full p-2 relative overflow-hidden">
           <football-player v-for="player in players" :key="player.id" :player="player" :parent="footballPitchEl" />
+
+          <!-- Divisions -->
+          <football-space-divisions>
+            <football-space-division id="couloir-droit" name="Couloir droit" />
+            <football-space-division id="couloir-central" name="Couloir central" />
+            <football-space-division id="couloir-gauche" name="Couloir gauche" />
+          </football-space-divisions>
         </div>
       </client-only>
+
+      <div>
+        <u-card>
+          <template #title>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Description
+            </h3>
+          </template>
+
+          <p v-for="item in selectedPreset?.description" class="font-light">
+            {{ item }}
+          </p>
+        </u-card>
+      </div>
     </div>
   </section>
 
@@ -58,7 +90,7 @@ const { showModal, editablePlayer } = usePlayerComposable()
  * Preset positions
  */
 const { names, items } = usePresetPositions()
-const { selectedName, selectedSubName, subNames, selectedSubPreset, loadPreset } = usePresetPositionSelection(items, players)
+const { selectedName, selectedSubName, subNames, selectedPreset, selectedSubPreset, loadPreset } = usePresetPositionSelection(items, players)
 
 const strPlayers = computed(() => JSON.stringify(players.value))
 const { copy } = useClipboard({ source: strPlayers })
