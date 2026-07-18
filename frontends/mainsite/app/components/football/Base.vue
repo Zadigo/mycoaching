@@ -33,15 +33,15 @@
     <!-- Pitch -->
     <div class="relative grid grid-cols-2 gap-10 rounded-lg">
       <client-only>
-        <div ref="footballPitchEl" class="bg-blue-50 dark:bg-blue-800 h-200 w-full p-2 relative overflow-hidden">
+        <div ref="footballPitchEl" class="bg-primary-50 dark:bg-primary-800 h-200 w-full p-2 relative overflow-hidden rounded-4xl">
           <football-player v-for="player in players" :key="player.id" :player="player" :parent="footballPitchEl" />
 
           <!-- Divisions -->
-          <football-space-divisions v-if="showGrid">
+          <football-space-divisions v-if="showGrid" :with-half-spaces="showHalfSpaces">
             <football-space-division id="couloir-droit" name="Couloir droit" />
-            <football-space-division v-show="showHalfSpaces" id="half-space-1" name="Demi-espace droit" />
+            <football-space-division v-show="showHalfSpaces" :half-space="true" id="half-space-1" name="Demi-espace droit" />
             <football-space-division id="couloir-central" name="Couloir central" />
-            <football-space-division v-show="showHalfSpaces" id="half-space-2" name="Demi-espace gauche" />
+            <football-space-division v-show="showHalfSpaces" :half-space="true" id="half-space-2" name="Demi-espace gauche" />
             <football-space-division id="couloir-gauche" name="Couloir gauche" />
           </football-space-divisions>
         </div>

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils/module',
-    '@nuxtjs/google-fonts',
+    '@nuxt/fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/ngrok',
     '@nuxt/hints',
@@ -40,5 +40,16 @@ export default defineNuxtConfig({
   ngrok: {
     authtoken: process.env.NUXT_NGROK_AUTH_TOKEN,
     authtoken_from_env: true
+  },
+
+  fonts: {
+    families: [
+      {
+        name: 'Epunda Slab'
+      },
+      {
+        name: 'Epunda Sans'
+      }
+    ]
   }
 })
