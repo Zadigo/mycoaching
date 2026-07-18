@@ -1,0 +1,742 @@
+[
+    {
+        "name": "4-2-3-1",
+        "description": [
+            "Équilibre défensif",
+            "Construction propre",
+            "Transitions sécurisées",
+            "Les deux milieux sont des relayeurs (box-to-box ou créateurs)"
+        ],
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 709.6279907226562,
+                "y": 675.2420043945312,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 780.7761840820312,
+                "y": 531.2923583984375,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 616.64501953125,
+                "y": 530.984375,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Latéral Droit",
+                "globalPosition": "Défenseur",
+                "x": 933.9393310546875,
+                "y": 504.0078125,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Latéral Gauche",
+                "globalPosition": "Défenseur",
+                "x": 468.203125,
+                "y": 506.86822509765625,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Défensif Gauche",
+                "globalPosition": "Milieu",
+                "x": 775.1441650390625,
+                "y": 373.7496643066406,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Défensif Droit",
+                "globalPosition": "Milieu",
+                "x": 617.206298828125,
+                "y": 375.94366455078125,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Offensif Central",
+                "globalPosition": "Milieu",
+                "x": 691.293212890625,
+                "y": 193.98638916015625,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Ailier Droit",
+                "globalPosition": "Attaquant",
+                "x": 497.99176025390625,
+                "y": 221.31295776367188,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Ailier Gauche",
+                "globalPosition": "Attaquant",
+                "x": 884.50146484375,
+                "y": 212.2393798828125,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 684.0625,
+                "y": 67.08283996582031,
+                "roles": []
+            }
+        ]
+    },
+    {
+        "name": "4-3-3 Offensif",
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 709.6279907226562,
+                "y": 675.2420043945312,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 780.7761840820312,
+                "y": 531.2923583984375,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 616.64501953125,
+                "y": 530.984375,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Latéral Droit",
+                "globalPosition": "Défenseur",
+                "x": 933.9393310546875,
+                "y": 504.0078125,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Latéral Gauche",
+                "globalPosition": "Défenseur",
+                "x": 468.203125,
+                "y": 506.86822509765625,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Défensif Droit",
+                "globalPosition": "Milieu",
+                "x": 773.25,
+                "y": 344.2470703125,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Défensif Gauche",
+                "globalPosition": "Milieu",
+                "x": 615.40625,
+                "y": 348.8885498046875,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Offensif Central",
+                "globalPosition": "Milieu",
+                "x": 692.6937255859375,
+                "y": 269.9892883300781,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Ailier Droit",
+                "globalPosition": "Attaquant",
+                "x": 498.35614013671875,
+                "y": 119.51126098632812,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Ailier Gauche",
+                "globalPosition": "Attaquant",
+                "x": 878.816162109375,
+                "y": 114.96234130859375,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 684.0625,
+                "y": 67.08283996582031,
+                "roles": []
+            }
+        ]
+    },
+    {
+        "name": "4-3-3 Sentinelle",
+        "description": [
+            "Équilibre défensif",
+            "Construction propre",
+            "Transitions sécurisées",
+            "Les deux milieux sont des relayeurs (box-to-box ou créateurs)"
+        ],
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 704.5264282226562,
+                "y": 690.3848876953125,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 780.2293090820312,
+                "y": 590.3472900390625,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 636.3289794921875,
+                "y": 595.8010864257812,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Latéral Droit",
+                "globalPosition": "Défenseur",
+                "x": 920.8138427734375,
+                "y": 583.5291748046875,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Latéral Gauche",
+                "globalPosition": "Défenseur",
+                "x": 478.1920166015625,
+                "y": 596.5289306640625,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Central Droit",
+                "globalPosition": "Milieu",
+                "x": 787.7264404296875,
+                "y": 459.63360595703125,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Central Gauche",
+                "globalPosition": "Milieu",
+                "x": 596.6390380859375,
+                "y": 467.14959716796875,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Offensif Central",
+                "globalPosition": "Milieu",
+                "x": 694.2392578125,
+                "y": 372.0509033203125,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Ailier Droit",
+                "globalPosition": "Attaquant",
+                "x": 908.4137573242188,
+                "y": 270.0184326171875,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Ailier Gauche",
+                "globalPosition": "Attaquant",
+                "x": 499.08544921875,
+                "y": 274.0177917480469,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 691.3308715820312,
+                "y": 215.15853881835938,
+                "roles": []
+            }
+        ]
+    },
+    {
+        "name": "4-4-2",
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 709.6279907226562,
+                "y": 675.2420043945312,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 780.7761840820312,
+                "y": 531.2923583984375,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 616.64501953125,
+                "y": 530.984375,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Latéral Droit",
+                "globalPosition": "Défenseur",
+                "x": 940.8111572265625,
+                "y": 496.2491455078125,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Latéral Gauche",
+                "globalPosition": "Défenseur",
+                "x": 471.40850830078125,
+                "y": 503.9237060546875,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Droit",
+                "globalPosition": "Milieu",
+                "x": 941.859375,
+                "y": 299.83807373046875,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Central Gauche",
+                "globalPosition": "Milieu",
+                "x": 616.0726928710938,
+                "y": 383.84185791015625,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Central Droit",
+                "globalPosition": "Milieu",
+                "x": 792.3159790039062,
+                "y": 379.45849609375,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 763.060546875,
+                "y": 178.52288818359375,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Milieu Gauche",
+                "globalPosition": "Attaquant",
+                "x": 477.171875,
+                "y": 300.9818420410156,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 632.4140625,
+                "y": 181.46530151367188,
+                "roles": []
+            }
+        ]
+    },
+    {
+        "name": "3-4-3 Plat",
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 704.5264282226562,
+                "y": 690.3848876953125,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central",
+                "globalPosition": "Défenseur",
+                "x": 698.4237060546875,
+                "y": 590.6007690429688,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 593.1129760742188,
+                "y": 563.1008911132812,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 803.1585693359375,
+                "y": 548.3732299804688,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Milieu Gauche",
+                "globalPosition": "Milieu",
+                "x": 465.344970703125,
+                "y": 384.09478759765625,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Droit",
+                "globalPosition": "Milieu",
+                "x": 930.071044921875,
+                "y": 367.23291015625,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Central Gauche",
+                "globalPosition": "Milieu",
+                "x": 615.9453125,
+                "y": 434.7252197265625,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Central Droit",
+                "globalPosition": "Milieu",
+                "x": 758.328125,
+                "y": 431.35302734375,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Avant-Centre Droit",
+                "globalPosition": "Attaquant",
+                "x": 785.4451293945312,
+                "y": 231.88821411132812,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Avant-Centre Gauche",
+                "globalPosition": "Attaquant",
+                "x": 589.4547729492188,
+                "y": 237.331787109375,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 689.8898315429688,
+                "y": 177.015625,
+                "roles": []
+            }
+        ]
+    },
+    {
+        "name": "3-5-2",
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 704.5264282226562,
+                "y": 690.3848876953125,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central",
+                "globalPosition": "Défenseur",
+                "x": 698.4237060546875,
+                "y": 590.6007690429688,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 574.7877807617188,
+                "y": 596.0481567382812,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 813.23388671875,
+                "y": 588.7655029296875,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Milieu Gauche",
+                "globalPosition": "Milieu",
+                "x": 465.344970703125,
+                "y": 384.09478759765625,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Droit",
+                "globalPosition": "Milieu",
+                "x": 930.071044921875,
+                "y": 367.23291015625,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Central Gauche",
+                "globalPosition": "Milieu",
+                "x": 616.845947265625,
+                "y": 442.80645751953125,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Central Droit",
+                "globalPosition": "Milieu",
+                "x": 775.440673828125,
+                "y": 435.85821533203125,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Avant-Centre Droit",
+                "globalPosition": "Attaquant",
+                "x": 756.640625,
+                "y": 194.61532592773438,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Avant-Centre Gauche",
+                "globalPosition": "Attaquant",
+                "x": 676.4907836914062,
+                "y": 289.6948547363281,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 585.0979614257812,
+                "y": 201.70358276367188,
+                "roles": []
+            }
+        ]
+    },
+    {
+        "name": "3-4-3 Losange",
+        "positions": [
+            {
+                "id": 1,
+                "name": "Player 1",
+                "position": "Gardien",
+                "globalPosition": "Gardien",
+                "x": 704.5264282226562,
+                "y": 690.3848876953125,
+                "roles": []
+            },
+            {
+                "id": 2,
+                "name": "Player 2",
+                "position": "Défenseur Central",
+                "globalPosition": "Défenseur",
+                "x": 698.4237060546875,
+                "y": 590.6007690429688,
+                "roles": []
+            },
+            {
+                "id": 3,
+                "name": "Player 3",
+                "position": "Défenseur Central Gauche",
+                "globalPosition": "Défenseur",
+                "x": 574.7877807617188,
+                "y": 596.0481567382812,
+                "roles": []
+            },
+            {
+                "id": 4,
+                "name": "Player 4",
+                "position": "Défenseur Central Droit",
+                "globalPosition": "Défenseur",
+                "x": 813.23388671875,
+                "y": 588.7655029296875,
+                "roles": []
+            },
+            {
+                "id": 5,
+                "name": "Player 5",
+                "position": "Milieu Gauche",
+                "globalPosition": "Milieu",
+                "x": 483.68988037109375,
+                "y": 399.27801513671875,
+                "roles": []
+            },
+            {
+                "id": 6,
+                "name": "Player 6",
+                "position": "Milieu Droit",
+                "globalPosition": "Milieu",
+                "x": 930.0703125,
+                "y": 392.0516357421875,
+                "roles": []
+            },
+            {
+                "id": 7,
+                "name": "Player 7",
+                "position": "Milieu Défensif Central",
+                "globalPosition": "Milieu",
+                "x": 700.9952392578125,
+                "y": 486.5628662109375,
+                "roles": []
+            },
+            {
+                "id": 8,
+                "name": "Player 8",
+                "position": "Milieu Offensif Central",
+                "globalPosition": "Milieu",
+                "x": 697.9351806640625,
+                "y": 342.62255859375,
+                "roles": []
+            },
+            {
+                "id": 9,
+                "name": "Player 9",
+                "position": "Avant-Centre Droit",
+                "globalPosition": "Attaquant",
+                "x": 802.3883056640625,
+                "y": 251.56399536132812,
+                "roles": []
+            },
+            {
+                "id": 10,
+                "name": "Player 10",
+                "position": "Attaquant",
+                "globalPosition": "Attaquant",
+                "x": 690.0078125,
+                "y": 199.07217407226562,
+                "roles": []
+            },
+            {
+                "id": 11,
+                "name": "Player 11",
+                "position": "Avant-Centre Gauche",
+                "globalPosition": "Attaquant",
+                "x": 584.1342163085938,
+                "y": 259.8150329589844,
+                "roles": []
+            }
+        ]
+    }
+]

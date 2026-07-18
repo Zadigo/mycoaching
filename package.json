@@ -1,0 +1,8 @@
+{
+    "name": "@mycoaching/project",
+    "private": true,
+    "scripts": {
+        "dev": "pnpm --parallel --filter './frontends/*' dev",
+        "add:mainsite": "pnpm --filter mainsite add"
+    }  
+}
