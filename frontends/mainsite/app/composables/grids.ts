@@ -8,7 +8,7 @@ const halfSpaceDescription: string[] = [
   'Ces demi - espaces offrent des opportunités tactiques uniques, car ils permettent aux joueurs d\'opérer dans des zones moins densément peuplées, tout en étant plus proches du but qu\'en passant par les ailes.',
 ]
 
-export function useGridComposable() {
+export const useGridComposable = createSharedComposable(() => {
   const showVerticalGrid = useLocalStorage<boolean>('showVerticalGrid', false)
   const showVerticalGridHalfSpaces = useLocalStorage<boolean>('showVerticalGridHalfSpaces', false)
   const showGuardiolaGrid = useLocalStorage<boolean>('showGuardiolaGrid', false)
@@ -44,4 +44,4 @@ export function useGridComposable() {
     toggleEighteenGrid,
     toggleHorizontalGrid
   }
-}
+})
