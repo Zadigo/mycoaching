@@ -35,6 +35,10 @@
       <client-only>
         <div ref="footballPitchEl" class="bg-primary-50 dark:bg-primary-800 h-200 w-full p-2 relative overflow-hidden rounded-4xl">
           <football-player v-for="player in players" :key="player.id" :player="player" :parent="footballPitchEl" />
+          
+          <!-- <football-space-vertical /> -->
+          <!-- <football-space-eighteen /> -->
+          <football-space-guardiola />
 
           <!-- Divisions -->
           <football-space-divisions v-if="showGrid" :with-half-spaces="showHalfSpaces">

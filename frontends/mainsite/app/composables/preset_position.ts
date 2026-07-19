@@ -10,6 +10,7 @@ export function usePresetPositionSelection(presets: Ref<PresetPosition[]>, value
 
   function loadPreset() {
     if (isDefined(selectedPreset)) {
+      valuesToUpdate.value = []
       valuesToUpdate.value = selectedSubPreset.value?.formations || []
     }
   }

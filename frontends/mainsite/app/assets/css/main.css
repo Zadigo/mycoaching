@@ -28,6 +28,18 @@
   --color-space-800: #65344f;
   --color-space-900: #3d1f2f;
   --color-space-950: #140a10;
+
+  --color-vertical-space-50: #f1f0f7;
+  --color-vertical-space-100: #d5d3e6;
+  --color-vertical-space-200: #aca7cd;
+  --color-vertical-space-300: #9089bd;
+  --color-vertical-space-400: #827bb4;
+  --color-vertical-space-500: #746cac;
+  --color-vertical-space-600: #514c78;
+  --color-vertical-space-700: #464167;
+  --color-vertical-space-800: #2e2b45;
+  --color-vertical-space-900: #171622;
+  --color-vertical-space-950: #0c0b11;
 }
 
 h1, h2, h3, h4, h5, h6 {

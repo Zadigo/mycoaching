@@ -1,5 +1,5 @@
 <template>
-  <div :id="`player-${player.id}`" :style="_style" style="position: fixed;" ref="playerEl" class="w-13 h-13 rounded-full z-30 bg-primary-500 cursor-pointer shadow-md text-md font-bold uppercase text-blue-50 flex items-center justify-center hover:scale-110 transition-all ease-in-out duration-100">
+  <div :id="`player-${player.id}`" :style="_style" style="position:fixed;" ref="playerEl" class="w-13 h-13 rounded-full z-30 bg-primary-500 cursor-pointer shadow-md text-md font-bold uppercase text-blue-50 flex items-center justify-center hover:scale-110 transition-all ease-in-out duration-100">
     <u-popover mode="hover">
       <span class="block">
         {{ positionShortcuts(player.position) }}
@@ -34,10 +34,17 @@ const playerEl = useTemplateRef('playerEl')
 const _style = ref<string>('')
 
 if (import.meta.client) {
+  console.log('Parent', parent)
   const { x, y, style } = useDraggable(playerEl, {
     initialValue: { x: player.x, y: player.y },
-    containerElement: parent,
     autoScroll: true,
+    containerElement: parent,
+    // onMove(position) {
+    //   if (position.x < 120) x.value = 120
+    //   // if (position.x > 158) x.value = 158
+    //   if (position.y < 198) y.value = 198
+    //   if (position.y > 757) y.value = 757
+    // }
   })
 
   syncRef(_style, style, { direction: 'rtl' })
