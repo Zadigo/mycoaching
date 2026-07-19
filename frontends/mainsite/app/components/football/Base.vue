@@ -17,14 +17,29 @@
         </u-button>
 
         <div>
-          <u-button @click="() => { toggleGrid() }">
+          <u-button @click="() => { toggleWingsGrid() }">
             <icon name="i-lucide-grid" />
-            Montrer les espaces
+            Couloirs
           </u-button>
           
-          <u-button :disabled="!showGrid" @click="() => { toggleHalfSpaces() }">
+          <u-button :disabled="!showVerticalGrid" @click="() => { toggleWingsGridHalfSpaces() }">
             <icon name="i-lucide-grid" />
-            Montrer les demi-espaces
+            Couloirs + Demi-espaces
+          </u-button>
+          
+          <u-button @click="() => { toggleGuardiolaGrid() }">
+            <icon name="i-lucide-grid" />
+            Guardiola Grid
+          </u-button>
+
+          <u-button @click="() => { toggleEighteenGrid() }">
+            <icon name="i-lucide-grid" />
+            Eighteen Grid
+          </u-button>
+
+          <u-button @click="() => { toggleHorizontalGrid() }">
+            <icon name="i-lucide-grid" />
+            Horizontal Grid
           </u-button>
         </div>
       </u-card>
@@ -36,18 +51,18 @@
         <div ref="footballPitchEl" class="bg-primary-50 dark:bg-primary-800 h-200 w-full p-2 relative overflow-hidden rounded-4xl">
           <football-player v-for="player in players" :key="player.id" :player="player" :parent="footballPitchEl" />
           
-          <!-- <football-space-vertical /> -->
-          <!-- <football-space-eighteen /> -->
-          <football-space-guardiola />
+          <football-space-horizontal v-if="showHorizontalGrid" />
+          <football-space-eighteen v-if="showEighteenGrid" />
+          <football-space-guardiola v-if="showGuardiolaGrid" />
 
           <!-- Divisions -->
-          <football-space-divisions v-if="showGrid" :with-half-spaces="showHalfSpaces">
-            <football-space-division id="couloir-droit" name="Couloir droit" />
-            <football-space-division v-show="showHalfSpaces" :half-space="true" id="half-space-1" name="Demi-espace droit" />
-            <football-space-division id="couloir-central" name="Couloir central" />
-            <football-space-division v-show="showHalfSpaces" :half-space="true" id="half-space-2" name="Demi-espace gauche" />
-            <football-space-division id="couloir-gauche" name="Couloir gauche" />
-          </football-space-divisions>
+          <football-space-wings v-if="showVerticalGrid" :with-half-spaces="showVerticalGridHalfSpaces">
+            <football-space-wing id="couloir-droit" name="Couloir droit" />
+            <football-space-wing v-show="showVerticalGridHalfSpaces" :half-space="true" id="half-space-1" name="Demi-espace droit" />
+            <football-space-wing id="couloir-central" name="Couloir central" />
+            <football-space-wing v-show="showVerticalGridHalfSpaces" :half-space="true" id="half-space-2" name="Demi-espace gauche" />
+            <football-space-wing id="couloir-gauche" name="Couloir gauche" />
+          </football-space-wings>
         </div>
       </client-only>
 
@@ -112,6 +127,16 @@ const { copy } = useClipboard({ source: strPlayers })
  * Grids
  */
 
-const [showGrid, toggleGrid] = useToggle()
-const [showHalfSpaces, toggleHalfSpaces] = useToggle()
+ const { 
+  showVerticalGrid, 
+  showVerticalGridHalfSpaces, 
+  showGuardiolaGrid, 
+  showEighteenGrid, 
+  showHorizontalGrid,
+  toggleWingsGrid, 
+  toggleWingsGridHalfSpaces, 
+  toggleGuardiolaGrid, 
+  toggleEighteenGrid, 
+  toggleHorizontalGrid
+} = useGridComposable()
 </script>
