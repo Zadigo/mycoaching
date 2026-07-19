@@ -76,18 +76,20 @@ function advancedProfiler(innerEls: Element[]): AdvancedTemplate {
 
   template.season = innerEls[0]?.textContent.trim() || ''
   template.competition = innerEls[1]?.textContent.trim() || ''
+
   template.appearances = parseInt(cleanValue(innerEls[3]?.textContent))
-  template.goals = parseInt(cleanValue(innerEls[4]?.textContent))
-  template.assists = parseInt(cleanValue(innerEls[5]?.textContent))
-  template.ownGoals = parseInt(cleanValue(innerEls[6]?.textContent))
-  template.substitutionOn = parseInt(cleanValue(innerEls[7]?.textContent))
-  template.substitutionOff = parseInt(cleanValue(innerEls[8]?.textContent))
-  template.yellowCards = parseInt(cleanValue(innerEls[9]?.textContent))
-  template.secondYellowCards = parseInt(cleanValue(innerEls[10]?.textContent))
-  template.redCards = parseInt(cleanValue(innerEls[11]?.textContent))
-  template.penaltyGoals = parseInt(cleanValue(innerEls[12]?.textContent))
-  template.minutesPerGoal = parseFloat(cleanValue(innerEls[13]?.textContent))
-  template.minutesPlayed = parseInt(cleanValue(innerEls[14]?.textContent))
+  template.goals = parseInt(cleanValue(innerEls[5]?.textContent))
+  template.assists = parseInt(cleanValue(innerEls[6]?.textContent))
+  template.ownGoals = parseInt(cleanValue(innerEls[7]?.textContent))
+  template.substitutionOn = parseInt(cleanValue(innerEls[8]?.textContent))
+  template.substitutionOff = parseInt(cleanValue(innerEls[9]?.textContent))
+  template.yellowCards = parseInt(cleanValue(innerEls[10]?.textContent))
+  template.secondYellowCards = parseInt(cleanValue(innerEls[11]?.textContent))
+  template.redCards = parseInt(cleanValue(innerEls[12]?.textContent))
+  template.penaltyGoals = parseInt(cleanValue(innerEls[13]?.textContent))
+  template.minutesPerGoal = parseFloat(cleanValue(innerEls[14]?.textContent))
+  template.minutesPlayed = parseInt(cleanValue(innerEls[15]?.textContent))
+  
   return template
 }
 
