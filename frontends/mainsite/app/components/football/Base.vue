@@ -78,6 +78,12 @@
             {{ item }}
           </p>
         </u-card>
+
+        <u-card>
+          <p>
+            {{ description }}
+          </p>
+        </u-card>
       </div>
     </div>
   </section>
@@ -127,7 +133,8 @@ const { copy } = useClipboard({ source: strPlayers })
  * Grids
  */
 
- const { 
+ const {
+  description,
   showVerticalGrid, 
   showVerticalGridHalfSpaces, 
   showGuardiolaGrid, 

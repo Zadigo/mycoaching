@@ -1,11 +1,11 @@
 <template>
-  <div class="w-full h-full grid grid-cols-4 grid-rows-5 gap-2 rounded-3xl overflow-hidden text-3xl font-bold pointer-events-none text-vertical-space-50">
+  <div class="w-full h-full grid grid-cols-5 grid-rows-6 gap-2 rounded-3xl overflow-hidden text-3xl font-bold pointer-events-none text-vertical-space-50">
     <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
       Aile
     </div>
 
-    <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center col-span-2">
-      Demi-espace
+    <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center col-span-3">
+      Central
     </div>
     
     <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
@@ -49,7 +49,7 @@
       </div>
     </div> -->
 
-    <div class="grid col-span-2 row-span-3 bg-vertical-space-100 relative overflow-hidden">
+    <div class="grid col-span-3 row-span-4 bg-vertical-space-100 relative overflow-hidden">
       <div class="grid grid-rows-2 gap-y-1">
         <div v-for="i in 2" :key="i" data-id="center" class="grid grid-cols-12 gap-2">
           <div class="flex items-center justify-center bg-vertical-space-800 col-span-3">
@@ -92,17 +92,25 @@
     <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
       7
     </div>
-    
+
     <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
       8
     </div>
     
-    <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center col-span-2">
+    <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
       9
     </div>
     
     <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
       10
+    </div>
+
+    <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center col-span-3">
+      11
+    </div>
+
+    <div :class="glassmorphismTheme" class="text-vertical-space-50 flex items-center justify-center">
+      12
     </div>
   </div>
 </template>
