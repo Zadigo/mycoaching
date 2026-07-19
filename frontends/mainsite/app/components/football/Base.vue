@@ -84,27 +84,29 @@
             {{ description }}
           </p>
         </u-card>
+
+        <u-card id="edit-player">
+          <template #title>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Modifier le joueur
+            </h3>
+          </template>
+          
+          <div v-if="editablePlayer" class="space-y-2">
+            <div class="flex">
+              <u-input-menu v-model="editablePlayer.name" class="w-full" placeholder="Nom" />
+            </div>
+            
+            <div class="flex justify-start gap-2">
+              <u-select v-model="editablePlayer.globalPosition" :items="Array.from(globalPositions)" placeholder="Position globale" />
+              <u-input-menu v-model="editablePlayer.position" :items="Array.from(playerPositions)" placeholder="Position spécifique" />
+            </div>
+            <u-input-menu v-model="editablePlayer.roles" :items="Array.from(playerRoles)" placeholder="Rôle" multiple />
+          </div>
+        </u-card>
       </div>
     </div>
   </section>
-
-  <!-- Edit Player -->
-  <u-modal v-model:open="showModal">
-    <template #title>
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-        Modifier le joueur
-      </h3>
-    </template>
-
-    <template #body>
-      <div v-if="editablePlayer">
-        <u-input v-model="editablePlayer.name" placeholder="Nom" />
-        <u-select v-model="editablePlayer.globalPosition" :items="Array.from(globalPositions)" placeholder="Position globale" />
-        <u-input-menu v-model="editablePlayer.position" :items="Array.from(playerPositions)" placeholder="Position spécifique" />
-        <u-input-menu v-model="editablePlayer.roles" :items="Array.from(playerRoles)" placeholder="Rôle" multiple />
-      </div>
-    </template>
-  </u-modal>
 </template>
 
 <script setup lang="ts">
@@ -114,7 +116,7 @@ const footballPitchEl = useTemplateRef('footballPitchEl')
 
 const players = getBasePositions()
 const { history, commit, undo, redo } = useManualRefHistory(players)
-const { showModal, editablePlayer } = usePlayerComposable()
+const { editablePlayer } = usePlayerComposable()
 
 /**
  * Preset positions
