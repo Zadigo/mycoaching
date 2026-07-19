@@ -9,21 +9,55 @@ const halfSpaceDescription: string[] = [
 ]
 
 export const useGridComposable = createSharedComposable(() => {
-  const showVerticalGrid = useLocalStorage<boolean>('showVerticalGrid', false)
-  const showVerticalGridHalfSpaces = useLocalStorage<boolean>('showVerticalGridHalfSpaces', false)
+  const showWingsGrid = useLocalStorage<boolean>('showWingsGrid', false)
+  const showWingsGridWithHalfSpaces = useLocalStorage<boolean>('showWingsGridWithHalfSpaces', false)
   const showGuardiolaGrid = useLocalStorage<boolean>('showGuardiolaGrid', false)
   const showEighteenGrid = useLocalStorage<boolean>('showEighteenGrid', false)
   const showHorizontalGrid = useLocalStorage<boolean>('showHorizontalGrid', false)
 
-  const toggleWingsGrid = useToggle(showVerticalGrid)
-  const toggleWingsGridHalfSpaces = useToggle(showVerticalGridHalfSpaces)
+  const toggleWingsGrid = useToggle(showWingsGrid)
+  const toggleWingsGridHalfSpaces = useToggle(showWingsGridWithHalfSpaces)
   const toggleGuardiolaGrid = useToggle(showGuardiolaGrid)
   const toggleEighteenGrid = useToggle(showEighteenGrid)
   const toggleHorizontalGrid = useToggle(showHorizontalGrid)
 
   const description = ref<string>('')
 
-  watch([ showGuardiolaGrid, showVerticalGridHalfSpaces ], ([ newShowGuardiolaGrid, newShowVerticalGridHalfSpaces ]) => {
+  watch(showWingsGrid, (newValue) => {
+    if (newValue) {
+      toggleWingsGridHalfSpaces(false)
+      toggleGuardiolaGrid(false)
+      toggleEighteenGrid(false)
+      toggleHorizontalGrid(false)
+    }
+  })
+
+  watch(showWingsGridWithHalfSpaces, (newValue) => {
+    if (newValue) {
+      toggleGuardiolaGrid(false)
+      toggleEighteenGrid(false)
+      toggleHorizontalGrid(false)
+    }
+  })
+  
+  watch(showGuardiolaGrid, (newValue) => {
+    if (newValue) {
+      toggleWingsGrid(false)
+      toggleWingsGridHalfSpaces(false)
+      toggleEighteenGrid(false)
+      toggleHorizontalGrid(false)
+    }
+  })
+  
+  watch(showEighteenGrid, (newValue) => {
+    if (newValue) {
+      toggleWingsGrid(false)
+      toggleWingsGridHalfSpaces(false)
+      toggleHorizontalGrid(false)
+    }
+  })
+
+  watch([ showGuardiolaGrid, showWingsGridWithHalfSpaces ], ([ newShowGuardiolaGrid, newShowVerticalGridHalfSpaces ]) => {
     if (newShowGuardiolaGrid || newShowVerticalGridHalfSpaces) {
       description.value = halfSpaceDescription.join('\n')
     } else {
@@ -33,8 +67,8 @@ export const useGridComposable = createSharedComposable(() => {
 
   return {
     description,
-    showVerticalGrid,
-    showVerticalGridHalfSpaces,
+    showWingsGrid,
+    showWingsGridWithHalfSpaces,
     showGuardiolaGrid,
     showEighteenGrid,
     showHorizontalGrid,

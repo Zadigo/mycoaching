@@ -10,11 +10,11 @@
       <football-space-guardiola v-if="showGuardiolaGrid" />
 
       <!-- Divisions -->
-      <football-space-wings v-if="showVerticalGrid" :with-half-spaces="showVerticalGridHalfSpaces">
+      <football-space-wings v-if="showWingsGrid" :with-half-spaces="showWingsGridWithHalfSpaces">
         <football-space-wing id="couloir-droit" name="Couloir droit" />
-        <football-space-wing v-show="showVerticalGridHalfSpaces" :half-space="true" id="half-space-1" name="Demi-espace droit" />
+        <football-space-wing v-show="showWingsGridWithHalfSpaces" :half-space="true" id="half-space-1" name="Demi-espace droit" />
         <football-space-wing id="couloir-central" name="Couloir central" />
-        <football-space-wing v-show="showVerticalGridHalfSpaces" :half-space="true" id="half-space-2" name="Demi-espace gauche" />
+        <football-space-wing v-show="showWingsGridWithHalfSpaces" :half-space="true" id="half-space-2" name="Demi-espace gauche" />
         <football-space-wing id="couloir-gauche" name="Couloir gauche" />
       </football-space-wings>
     </div>
@@ -35,8 +35,8 @@ const footballPitchEl = useTemplateRef('footballPitchEl')
  */
 
  const {
-  showVerticalGrid, 
-  showVerticalGridHalfSpaces, 
+  showWingsGrid, 
+  showWingsGridWithHalfSpaces, 
   showGuardiolaGrid, 
   showEighteenGrid, 
   showHorizontalGrid

@@ -22,7 +22,7 @@
           Couloirs
         </u-button>
 
-        <u-button :disabled="!showVerticalGrid" @click="() => { toggleWingsGridHalfSpaces() }">
+        <u-button :disabled="!showWingsGrid" @click="() => { toggleWingsGridHalfSpaces() }">
           <icon name="i-lucide-grid" />
           Couloirs + Demi-espaces
         </u-button>
@@ -54,7 +54,7 @@ const { players = [] } = defineProps<{
 }>()
 
 const {
-  showVerticalGrid,
+  showWingsGrid,
   toggleWingsGrid,
   toggleWingsGridHalfSpaces,
   toggleGuardiolaGrid,
