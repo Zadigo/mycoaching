@@ -94,7 +94,7 @@
           
           <div v-if="editablePlayer" class="space-y-2">
             <div class="flex">
-              <u-input-menu v-model="editablePlayer.name" class="w-full" placeholder="Nom" />
+              <u-input-menu v-model="editablePlayer.name" :items="footballPlayerNames" class="w-full" placeholder="Nom" />
             </div>
             
             <div class="flex justify-start gap-2">
@@ -148,4 +148,10 @@ const { copy } = useClipboard({ source: strPlayers })
   toggleEighteenGrid, 
   toggleHorizontalGrid
 } = useGridComposable()
+
+/**
+ * Players
+ */
+
+const { players: footballPlayers, search: searchFootballPlayer, searched: searchedFootballPlayers, names: footballPlayerNames } = usePlayers()
 </script>

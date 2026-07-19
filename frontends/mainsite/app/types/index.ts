@@ -628,3 +628,25 @@ export type PresetPosition = {
   description: string | string[]
   formations: Formation[]
 }
+
+export type FootballPlayerStatistic = {
+  competition: string
+  appearances: number
+  goals: number
+  assists: number
+  ownGoals: number
+  substitutionOn: number
+  substitutionOff: number
+  yellowCards: number
+  redCards: number
+  penaltyGoals: number
+  minutesPerGoal: number
+  minutesPlayed: number
+}
+
+export type FootballPlayer = {
+  fullName: string
+  statistics: FootballPlayerStatistic[]
+}
+
+export type FootballPlayerStatisticKeys = keyof Pick<FootballPlayerStatistic, 'assists' | 'goals' | 'ownGoals' | 'substitutionOn' | 'substitutionOff' | 'yellowCards' | 'redCards' | 'penaltyGoals' | 'minutesPerGoal' | 'minutesPlayed'>

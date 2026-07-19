@@ -6,10 +6,33 @@
       </span>
 
       <template #content>
-        <div class="max-w-60 p-10">
+        <div class="max-w-80 p-10">
           <p class="font-bold">{{ player.name }}</p>
           <p class="font-light italic">{{ player.position }}</p>
-          <p v-for="role in player.roles" :key="role">{{ role }}</p>
+
+          <div class="my-4">
+            <p v-for="role in player.roles" :key="role" class="flex items-center">
+              <icon name="i-lucide-star" class="me-2" />
+              {{ role }}
+            </p>
+          </div>
+
+          <div id="statistics" class="mt-4">
+            <p class="flex gap-2">
+              <span class="font-medium">Avg. Goals:</span>
+              <span class="font-light">{{ getAverageGoals }}</span>
+            </p>
+
+            <p class="flex gap-2">
+              <span class="font-medium">Avg. Assists:</span>
+              <span class="font-light">{{ getAverageAssists }}</span>
+            </p>
+
+            <p class="flex gap-2">
+              <span class="font-medium">Goals to Assists Ratio:</span>
+              <span class="font-light">{{ goalsToAssistsRatio }}</span>
+            </p>
+          </div>
         </div>
       </template>
     </u-popover>
@@ -58,4 +81,15 @@ const selected = isSelected(player)
 //     ignore: ['#edit-player']
 //   })
 // }
+
+/**
+ * Player Statistics
+ */
+
+const { searched: searchedPlayer, getAverage: getAverageGoals, getMin: getMinGoals, getMax: getMaxGoals, getSum: getSumGoals } = usePlayerStatistics(computed(() => player.name), 'goals')
+const { getAverage: getAverageAssists, getMin: getMinAssists, getMax: getMaxAssists, getSum: getSumAssists } = usePlayerStatistics(computed(() => player.name), 'assists')
+
+const { ratio } = useAdvancedStatistics()
+const goalsToAssistsRatio = usePrecision(ratio(getSumGoals.value, getSumAssists.value), 2)
+// const goaldsByApparencesRatio = usePrecision(ratio(getSumGoals.value, searchedPlayer.value), 2)
 </script>

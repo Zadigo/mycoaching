@@ -1,4 +1,4 @@
-import type { Player } from "~/types";
+import type { Player } from '~/types'
 
 export const usePlayerComposable = createSharedComposable(() => {
   const editablePlayer = ref<Player>()
@@ -7,8 +7,8 @@ export const usePlayerComposable = createSharedComposable(() => {
     return editablePlayer.value?.id === player.id
   })
   
-  function selectPlayer(player: Player) {
-    editablePlayer.value = player
+  function selectPlayer(player: MaybeRef<Player>) {
+    editablePlayer.value = unref(player)
   }
   
   return {
