@@ -51,6 +51,8 @@
         <div ref="footballPitchEl" class="bg-primary-50 dark:bg-primary-800 h-200 w-full p-2 relative overflow-hidden rounded-4xl">
           <football-player v-for="player in players" :key="player.id" :player="player" :parent="footballPitchEl" />
           
+          <football-space-formations-base :players="players" />
+
           <football-space-horizontal v-if="showHorizontalGrid" />
           <football-space-eighteen v-if="showEighteenGrid" />
           <football-space-guardiola v-if="showGuardiolaGrid" />
