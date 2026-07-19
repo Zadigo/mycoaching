@@ -17,6 +17,8 @@
             </p>
           </div>
 
+          {{ getValues }}
+
           <div id="statistics" class="mt-4">
             <p class="flex gap-2">
               <span class="font-medium">Avg. Goals:</span>
@@ -86,7 +88,7 @@ const selected = isSelected(player)
  * Player Statistics
  */
 
-const { searched: searchedPlayer, getAverage: getAverageGoals, getMin: getMinGoals, getMax: getMaxGoals, getSum: getSumGoals } = usePlayerStatistics(computed(() => player.name), 'goals')
+const { searched: searchedPlayer, getValues, getAverage: getAverageGoals, getMin: getMinGoals, getMax: getMaxGoals, getSum: getSumGoals } = usePlayerStatistics(computed(() => player.name), 'goals')
 const { getAverage: getAverageAssists, getMin: getMinAssists, getMax: getMaxAssists, getSum: getSumAssists } = usePlayerStatistics(computed(() => player.name), 'assists')
 
 const { ratio } = useAdvancedStatistics()

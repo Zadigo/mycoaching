@@ -630,6 +630,7 @@ export type PresetPosition = {
 }
 
 export type FootballPlayerStatistic = {
+  season: string
   competition: string
   appearances: number
   goals: number
